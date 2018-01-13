@@ -1,0 +1,7 @@
+<resources>
+    <!-- Constants -->
+    <string name="about_url" translatable="false" formatted="false">https://andela.com/about</string>
+    <!-- Others -->
+    <string name="app_name">alc</string>
+    <string name="action_settings">Settings</string>
+</resources>
