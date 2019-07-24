@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import com.example.alc.activity.AboutActivity;
@@ -24,18 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button aboutBtn = findViewById(R.id.about_btn);
-        aboutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(aboutIntent);
-            }
+        aboutBtn.setOnClickListener(v -> {
+            Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(aboutIntent);
         });
 
         Button accountBtn = findViewById(R.id.account_btn);
         accountBtn.setOnClickListener(v -> {
-            Intent aboutIntent = new Intent(MainActivity.this, AccountActivity.class);
-            startActivity(aboutIntent);
+            Intent accountIntent = new Intent(MainActivity.this, AccountActivity.class);
+            startActivity(accountIntent);
         });
 
         FloatingActionButton fab = findViewById(R.id.fab);
